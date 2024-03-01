@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+
+  <!-- player-list.component.html -->
+  <ng-template #playerList>
+    <h1>Player List</h1>
+    <ul>
+      <li *ngFor="let player of players">
+        {{ player.name }} - {{ player.age }} - {{ player.team }} - {{ player.position }}
+      </li>
+    </ul>
+  </ng-template>
+
+  <!-- player-form.component.html -->
+  <ng-template #playerForm>
+    <h1>Add Player</h1>
+    <form (submit)="onSubmit()">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="player.name" name="name" required><br>
+      <label>Age:</label>
+      <input type="number" [(ngModel)]="player.age" name="age" required><br>
+      <label>Team:</label>
+      <input type="text" [(ngModel)]="player.team" name="team"><br>
+      <label>Position:</label>
+      <input type="text" [(ngModel)]="player.position" name="position"><br>
+      <button type="submit">Add Player</button>
+    </form>
+  </ng-template>
+</body>
+</html>

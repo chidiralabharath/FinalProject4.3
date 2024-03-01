@@ -1,0 +1,23 @@
+<!-- frontend/src/app/player-form/player-form.component.html -->
+
+<h2>Add New Player</h2>
+
+<form (submit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="player.name" required>
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" [(ngModel)]="player.age" required>
+  </div>
+  <div>
+    <label for="team">Team:</label>
+    <input type="text" id="team" name="team" [(ngModel)]="player.team">
+  </div>
+  <div>
+    <label for="position">Position:</label>
+    <input type="text" id="position" name="position" [(ngModel)]="player.position">
+  </div>
+  <button type="submit">Add Player</button>
+</form>

@@ -1,0 +1,9 @@
+<!-- frontend/src/app/player-list/player-list.component.html -->
+
+<h2>Player List</h2>
+
+<ul>
+  <li *ngFor="let player of players">
+    Name: {{ player.name }}, Age: {{ player.age }}, Team: {{ player.team }}, Position: {{ player.position }}
+  </li>
+</ul>
